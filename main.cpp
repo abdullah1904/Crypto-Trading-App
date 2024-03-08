@@ -1,4 +1,5 @@
 #include <iostream>
+#include <string>
 using namespace std;
 
 void printMenu();
@@ -12,6 +13,13 @@ void printWallet();
 void nextTimeFrame();
 
 int main(){
+    double price = 32.74659999;
+    double amount = 0.0218;
+
+    string timeStamp{"2020/03/17 17:01:24.884492"};
+    string product{"ETH/BTC"};
+    string orderType{"bid"};
+
     while (true){
         printMenu();
         processOption(getOption());
