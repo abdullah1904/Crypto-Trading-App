@@ -1,5 +1,6 @@
 #include <iostream>
 #include <string>
+#include <vector>
 using namespace std;
 
 void printMenu();
@@ -12,13 +13,16 @@ void enterBid();
 void printWallet();
 void nextTimeFrame();
 
-int main(){
-    double price = 32.74659999;
-    double amount = 0.0218;
+enum class orderBookType{bid,ask};
 
-    string timeStamp{"2020/03/17 17:01:24.884492"};
-    string product{"ETH/BTC"};
-    string orderType{"bid"};
+int main(){
+    vector<double> prices = {5000.01};
+    vector<double> amounts = {0.01};
+
+    vector<string> timeStamps = {"2020/03/17 17:01:24.884492"};
+    vector<string> products = {"ETH/BTC"};
+
+    vector<orderBookType> orderTypes = {orderBookType::bid};
 
     while (true){
         printMenu();
