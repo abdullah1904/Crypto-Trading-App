@@ -15,14 +15,27 @@ void nextTimeFrame();
 
 enum class orderBookType{bid,ask};
 
+class orderBookEntry{
+    public:
+        double price;
+        double amount;
+        string timeStamp;
+        string product;
+        orderBookType orderType;
+};
+
 int main(){
-    vector<double> prices = {5000.01};
-    vector<double> amounts = {0.01};
+    orderBookEntry order1;
+    order1.price = 10000;
+    order1.amount = 0.002;
+    order1.timeStamp = "2020/03/17 17:01:24.884492";
+    order1.product = "ETH/BTC";
+    order1.orderType = orderBookType::bid;
 
-    vector<string> timeStamps = {"2020/03/17 17:01:24.884492"};
-    vector<string> products = {"ETH/BTC"};
-
-    vector<orderBookType> orderTypes = {orderBookType::bid};
+    cout<<"Order 1 Price:"<<order1.price<<endl;
+    cout<<"Order 1 Amount:"<<order1.amount<<endl;
+    cout<<"Order 1 Time Stamp:"<<order1.timeStamp<<endl;
+    cout<<"Order 1 Product:"<<order1.product<<endl;
 
     while (true){
         printMenu();
