@@ -18,12 +18,8 @@ enum class orderBookType{bid,ask};
 class orderBookEntry{
     public:
 
-        orderBookEntry(double price, double amount, string timeStamp, string product, orderBookType orderType){
-            this->price = price;
-            this->amount =amount;
-            this->timeStamp = timeStamp;
-            this->product = product;
-            this->orderType = orderType;
+        orderBookEntry  (double price, double amount, string timeStamp, string product, orderBookType orderType):price(price), amount(amount), timeStamp(timeStamp), product(product), orderType(orderType){
+            
         }
 
         double price;
