@@ -33,15 +33,12 @@ int main(){
     orders.push_back(orderBookEntry{3000, 0.02, "2020/03/17 12:21:59.884492", "BTC/ETH", orderBookType::ask});
     orders.push_back(orderBookEntry{10000, 0.002, "2020/03/17 17:01:24.884492", "ETH/BTC", orderBookType::bid});
 
-    cout<<"Order 1 Price: "<<orders[0].price<<endl;
-    cout<<"Order 1 Amount: "<<orders[0].amount<<endl;
-    cout<<"Order 1 Time Stamp: "<<orders[0].timeStamp<<endl;
-    cout<<"Order 1 Product: "<<orders[0].product<<endl;
-
-    cout<<"Order 2 Price: "<<orders[1].price<<endl;
-    cout<<"Order 2 Amount: "<<orders[1].amount<<endl;
-    cout<<"Order 2 Time Stamp: "<<orders[1].timeStamp<<endl;
-    cout<<"Order 2 Product: "<<orders[1].product<<endl;
+    for(orderBookEntry& order: orders){
+        cout<<"Order Price: "<<order.price<<endl;
+        cout<<"Order Amount: "<<order.amount<<endl;
+        cout<<"Order Time Stamp: "<<order.timeStamp<<endl;
+        cout<<"Order Product: "<<order.product<<endl<<endl;
+    } 
 
     while (true){
         printMenu();
