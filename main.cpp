@@ -13,19 +13,7 @@ void enterBid();
 void printWallet();
 void nextTimeFrame();
 
-enum class orderBookType{bid,ask};
 
-class orderBookEntry{
-    public:
-        orderBookEntry  (double price, double amount, string timeStamp, string product, orderBookType orderType):price(price), amount(amount), timeStamp(timeStamp), product(product), orderType(orderType){
-            // Constructor Code
-        }
-        double price;
-        double amount;
-        string timeStamp;
-        string product;
-        orderBookType orderType;
-};
 
 int main(){
     vector<orderBookEntry> orders;
