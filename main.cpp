@@ -1,6 +1,7 @@
 #include <iostream>
 #include <string>
 #include <vector>
+#include "OrderBookEntry.h"
 using namespace std;
 
 void printMenu();
@@ -12,8 +13,6 @@ void enterOffer();
 void enterBid();
 void printWallet();
 void nextTimeFrame();
-
-
 
 int main(){
     vector<orderBookEntry> orders;
