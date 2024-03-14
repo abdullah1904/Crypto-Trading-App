@@ -1,6 +1,3 @@
-#ifndef CryptoApp
-#define CryptoApp
-
 class cryptoApp{
     public:
         cryptoApp();
@@ -15,5 +12,3 @@ class cryptoApp{
         void printWallet();
         void nextTimeFrame();
 };
-
-#endif

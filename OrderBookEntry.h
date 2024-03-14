@@ -1,6 +1,3 @@
-#ifndef OrderBookEntry
-#define OrderBookEntry
-
 #include <string>
 
 enum class orderBookType{bid,ask};
@@ -14,5 +11,3 @@ class orderBookEntry{
         std::string product;
         orderBookType orderType;
 };
-
-#endif
