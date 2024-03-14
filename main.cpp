@@ -8,10 +8,6 @@ using namespace std;
 
 int main(){
     cryptoApp tradingApp;
-    while (true){
-        tradingApp.printMenu();
-        tradingApp.processOption(tradingApp.getOption());
-        cout << endl;
-    }
+    tradingApp.init();
     return 0;
 }

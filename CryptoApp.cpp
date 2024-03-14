@@ -8,7 +8,12 @@ cryptoApp::cryptoApp(){
 }
 
 void cryptoApp::init(){
-    // Function Definition
+    int input;
+    while(true){
+        this->printMenu();
+        this->processOption(this->getOption());
+        cout<<endl;
+    }
 }
 
 void cryptoApp::printMenu(){
