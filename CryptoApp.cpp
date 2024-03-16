@@ -1,5 +1,7 @@
 #include <iostream>
+#include <vector>
 #include "CryptoApp.h"
+#include "OrderBookEntry.h"
 
 using namespace std;
 
@@ -8,12 +10,18 @@ cryptoApp::cryptoApp(){
 }
 
 void cryptoApp::init(){
+    loadOrderBook();
     int input;
     while(true){
         this->printMenu();
         this->processOption(this->getOption());
         cout<<endl;
     }
+}
+
+void cryptoApp::loadOrderBook(){
+    orders.push_back(orderBookEntry {1000,0.1,"2020/03/17 17:02:00.124758","ETH/BTC",orderBookType::bid});
+    orders.push_back(orderBookEntry {3000,0.05,"2020/03/17 17:02:34.124758","BTC/ETH",orderBookType::ask});
 }
 
 void cryptoApp::printMenu(){
@@ -63,7 +71,7 @@ void cryptoApp::printHelp(){
 }
 
 void cryptoApp::printMarketStats(){
-    cout << "Market looks good" << endl;
+    cout << "Order Book contains : " << orders.size() << " entries" << endl;
 }
 
 void cryptoApp::enterOffer(){
